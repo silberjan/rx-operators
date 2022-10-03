@@ -1,0 +1,40 @@
+{
+  "name": "@jcs/rx-operators",
+  "version": "1.0.0",
+  "description": "Collection of useful rxjs operators",
+  "main": "index.ts",
+  "scripts": {
+    "test": "npm run test",
+    "build": "rollup --config rollup.config.ts --configPlugin typescript",
+    "postbuild": "cp package.json dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silberjan/rx-operators.git"
+  },
+  "keywords": [
+    "rxjs",
+    "javascript",
+    "typescript",
+    "observable",
+    "operators"
+  ],
+  "author": "Jan Silbersiepe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/silberjan/rx-operators/issues"
+  },
+  "homepage": "https://github.com/silberjan/rx-operators#readme",
+  "peerDependencies": {
+    "@ngrx/store": "^14.0.0",
+    "rxjs": "^7.0.0"
+  },
+  "devDependencies": {
+    "@ngrx/store": "^14.3.1",
+    "@rollup/plugin-typescript": "^8.5.0",
+    "rxjs": "^7.5.7",
+    "typescript": "^4.8.4",
+    "@types/rollup": "^0.54.0",
+    "rollup": "^2.79.1"
+  }
+}
