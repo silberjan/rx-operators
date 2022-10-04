@@ -1,12 +1,12 @@
-import { Observable, map, distinctUntilChanged } from 'rxjs'
+import { Observable, map, distinctUntilChanged, filter } from 'rxjs'
 
 /**
  * Returns a truthy emission if a non-empty array was emitted
  */
 export function notEmpty<T>() {
-  return (source$: Observable<T[]>): Observable<boolean> =>
+  return (source$: Observable<T[]>): Observable<T[]> =>
     source$.pipe(
-      map((values: T[]) => values.length > 0),
+      filter((values: T[]) => values.length > 0),
       distinctUntilChanged()
     )
 }
